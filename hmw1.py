@@ -30,7 +30,7 @@
 #     if 4 < i.rami < 16:
 #         print(i.info())
 
-# -----------------------------------
+# ------------------------------------
 
 # class user:
 #     def __init__(self, u_name, name, email):
