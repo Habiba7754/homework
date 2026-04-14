@@ -1,47 +1,109 @@
-# class Kitob:
-#     def __init__(self, name, author, price, nashriyot):
+# class Student:
+#     def __init__(self, name, student_id):
 #         self.name = name
-#         self.author = author
-#         self.price = price
-#         self.nashriyot = nashriyot
-#     def info(self):
-#         return self.name, self.author, self.price, self.nashriyot
-    
-# lst = [Kitob(input("kitob nomi: "), (input("kitob muallifi: ")), int(input("kitob narxi: ")), input("kitob nashriyoti: ")) for i in range(5)]
+#         self.student_id = student_id
+#         self.grades = []
+#     def add_grade(self, grade):
+#             if 0 <= grade <= 100:
+#                  self.grades.append(grade)
+#             else:
+#                  print("Xato: Noto'gri baho")
+#     def calculate_average(self):
+#         return sum(self.grades) / len(self.grades)
+#     def get_status(self):
+#         avg = self.calculate_average()
+#         if 90 <= avg <= 100:
+#             return "A'lo"
+#         elif 80 <= avg <= 89:
+#             return "Yaxshi"
+#         elif 70 <= avg <= 79:
+#             return "Qoniqarli"
+#         else:
+#             return "Qoniqarsiz"
+        
+# student = Student("Nodira", "S123")
+# student.add_grade(85)
+# student.add_grade(90)
+# print(student.calculate_average())
+# print(student.get_status())
+# student.add_grade(150)
 
-# for i in lst:
-#     if 'A' <= i.nashriyot[0].upper() <= 'H':
-#         print(i.info())
+# ----------------------------------
 
-# --------------------------------
-
-# class Kompyuter:
-#     def __init__(self, name, rami, narxi, protsessori):
+# class Employee:
+#     def __init__(self, name, employee_id, hourly_rate = 15.0):
 #         self.name = name
-#         self.rami = rami
-#         self.narxi = narxi
-#         self.protsessori = protsessori
-#     def info(self):
-#         return self.name, self.rami, self.narxi, self.protsessori
-    
-# lst = [Kompyuter(input("kompyuter nomi: "), int((input("kompyuter rami: "))), int(input("kompyuter narxi: ")), input("kompyuter protsessori: ")) for i in range(4)]
+#         self.employee_id = employee_id
+#         self.hourly_rate = hourly_rate
+#         self.working_hours = []
+#     def log_hours(self, hour):
+#         if 0 <= hour <= 24:
+#             self.working_hours.append(hour)
+#             return True
+#         return False
+#     def total_hours(self):
+#         return sum(self.working_hours)
+#     def calculate_salary(self):
+#         return self.total_hours() * self.hourly_rate
+#     def reset_hours(self):
+#         self.working_hours.clear()
 
-# for i in lst:
-#     if 4 < i.rami < 16:
-#         print(i.info())
+# employee = Employee("Javlon", "E101", hourly_rate=20.0)
+# print(employee.log_hours(8)) 
+# print(employee.log_hours(9))
+# print(employee.log_hours(10))
+# print(employee.log_hours(25))
+# print(employee.total_hours())
+# print(employee.calculate_salary()) 
+# employee.reset_hours()
+# print(employee.total_hours())
+# print(employee.calculate_salary())  
 
-# ------------------------------------
+# ----------------------------------
 
-# class user:
-#     def __init__(self, u_name, name, email):
-#         self.name = name
-#         self.u_name = u_name
-#         self.email = email
-#     def info(self):
-#         return f"Foydalanuvchi: {self.u_name}, ismi: {self.name}, email: {self.email}"
+# class Playlist:
+#     def __init__(self, owner):
+#         self.owner = owner
+#         self.tracks = []
+#     def add_track(self, title, artist):
+#         self.tracks.append((title, artist))
+#     def remove_last(self):
+#         if self.tracks:
+#             return self.tracks.pop() 
+#         return None
+#     def total_tracks(self):
+#         return len(self.tracks)
+#     def unique_tracks(self):
+#         st = set()
+#         unique_lst = []
+#         for i in self.tracks:
+#             if i not in st:
+#                 st.add(i)
+#                 unique_lst.append(i)
+#         return unique_lst
+#     def search_by_title(self, title):
+#         return [i for i in self.tracks if i[0] == title]
+#     def filter_by_artist(self, artist):
+#         return [i for i in self.tracks if i[1] == artist]
 
-# u1 = user("ali1994", "Ali Valiyev", "ali1994@gmail.com")
-# u2 = user("vali144", "jilm Doe", "doe22@gmail.com")
+# pl = Playlist("Muhammad")
 
-# print(u1.info())
-# print(u2.info())
+# print(pl.total_tracks())
+
+# pl.add_track("Yomg'irlar", "Shahzoda")
+# pl.add_track("Gulim", "Yulduz Usmonova")
+# pl.add_track("Yomg'irlar", "Shahzoda")
+# pl.add_track("Xayr edi", "Lola")
+# pl.add_track("Kel", "Ulug'bek Rahmatullayev")
+
+# print(pl.total_tracks())
+
+# print(pl.unique_tracks())               
+
+# print(pl.remove_last())
+
+# print(pl.total_tracks())
+
+# print(pl.search_by_title("Yomg'irlar"))       
+
+# print(pl.filter_by_artist("Yulduz Usmonova")) 
