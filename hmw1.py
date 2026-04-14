@@ -22,9 +22,12 @@
 #             return "Qoniqarsiz"
         
 # student = Student("Nodira", "S123")
+
 # student.add_grade(85)
 # student.add_grade(90)
+
 # print(student.calculate_average())
+
 # print(student.get_status())
 # student.add_grade(150)
 
@@ -49,12 +52,15 @@
 #         self.working_hours.clear()
 
 # employee = Employee("Javlon", "E101", hourly_rate=20.0)
+
 # print(employee.log_hours(8)) 
 # print(employee.log_hours(9))
 # print(employee.log_hours(10))
 # print(employee.log_hours(25))
+
 # print(employee.total_hours())
 # print(employee.calculate_salary()) 
+
 # employee.reset_hours()
 # print(employee.total_hours())
 # print(employee.calculate_salary())  
